@@ -3,10 +3,12 @@
 
 <p>page3 area</p>
 
-<form action="/page1/" method="POST">{% csrf_token %}
+<form action="/page4/" method="POST">{% csrf_token %}
     <label for="name">　出力: </label>
     <input type="text" name = 'inputbox1' list="sampleDatalistId">
     <input type="text" name = 'inputbox2' list="sampleDatalistId">
     <input type="submit" value='遷移'>
 </form>
+<iframe width="460" height="315" src="{{ page3_dict.testurl2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{ page3_dict.testurl1 }}
 {% endblock %}

@@ -12,10 +12,16 @@ def send_page1(inputbox1,inputbox2):
     }
     return page1_dict
 
+
+#【ボートレース住之江・イベント配信】JUKUJO DE ナイと！（2022/2/23）
+testurl1 = "https://www.youtube.com/embed/v6Qo3DpnmhQ"
+#【ボートレース住之江】 １Ｒ－６Ｒ 実況放送～７Ｒ－１２Ｒ マスヒノ大作戦（2022/1/31）
+testurl2 = "https://www.youtube.com/embed/_Hod11jijWA"
 def send_page3():
     page3_dict={
         'Title':'SAMPLE TITLE',
-        'View':[i for i in df.iloc[:, 2]],
-        'Axis':[i for i in df.iloc[:, 0]],
+        'testurl1':testurl1,
+        'testurl2':testurl2
     }
     return page3_dict
+

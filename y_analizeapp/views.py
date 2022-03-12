@@ -16,6 +16,16 @@ def page2(request):
     return render(request,'y_analizeapp/page2.html')
 
 def page3(request): 
+    inputbox1 = request.POST.get('inputbox1')
+    if inputbox1 == '1':
+        page3_dict = page3_dict=function.send_page3()
+    else:
+        page3_dict = page3_dict=function.send_page3()
+
+    page3_dict = page3_dict=function.send_page3()
+    print(page3_dict)
     
-    page3_dict = function.send_page3()
     return render(request,'y_analizeapp/page3.html',{'page3_dict':page3_dict})
+
+def page4(request):
+    return render(request, 'y_analizeapp/page4.html')

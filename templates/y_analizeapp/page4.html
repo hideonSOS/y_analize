@@ -1,0 +1,16 @@
+{% extends 'y_analizeapp/template.html' %}
+{% block content %}
+<p></p>
+
+<form action="/page3/" method="POST">{% csrf_token %}
+    <div>
+        <input type='text' name="inputbox1" class="input-btn-padding-y-sm">
+    </div>
+    <p></p>
+    <div>
+        <input type='submit' value="button" class="btn btn-warning">
+    </div>
+</form>
+
+
+{% endblock %}
