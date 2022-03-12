@@ -1,0 +1,12 @@
+{% extends 'y_analizeapp/template.html' %}
+{% block content %}
+
+<p>page3 area</p>
+
+<form action="/page1/" method="POST">{% csrf_token %}
+    <label for="name">　出力: </label>
+    <input type="text" name = 'inputbox1' list="sampleDatalistId">
+    <input type="text" name = 'inputbox2' list="sampleDatalistId">
+    <input type="submit" value='遷移'>
+</form>
+{% endblock %}
