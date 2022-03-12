@@ -1,4 +1,6 @@
-{% extends 'y_analize/template.html' %}
+{% extends 'y_analizeapp/template.html' %}
+{% load static %}
 {% block content %}
 <p>test2 Area</p>
-{% end block %}
+<img src="{% static 'y_analizeapp/test.jpg' %}"></img>
+{% endblock %}

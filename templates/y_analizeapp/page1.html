@@ -1,8 +1,39 @@
 {% extends 'y_analizeapp/template.html' %}
 {% block content %}
 <p>page1 content</p>
-
-
-
+<style>
+    #ex_chart {max-width:1860px;max-height:480px;}
+</style>
+    <canvas id="ex_chart"></canvas>
+    <script>
+    var ctx = document.getElementById('ex_chart');
+    var data = {
+        labels: ["1月", "2月", "3月", "4月", "5月"],
+        datasets: [{
+            label: 'テストデータ１',
+            data: [880, 740, 900, 520, 930],
+            borderColor: 'rgba(255, 100, 100, 1)',
+            borderWidth:1,
+            fill:false,
+            pointRadius:0
+        },
+        {
+            label: 'テストデータ２',
+            data: [580, 100, 600, 320, 230],
+            borderColor: 'rgba(0, 0, 200, 1)',
+            borderWidth:1,
+            fill:false,
+            pointRadius:0
+        }]
+    };
+    var options = {
+        maintainAspectRatio:false,
+    };
+    var ex_chart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+    });
+    </script>
 
 {% endblock %}
