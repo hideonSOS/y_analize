@@ -11,5 +11,5 @@ def page1(request):
     return render(request,'y_analizeapp/page1.html', {'page1_dict':page1_dict})
 
 def page2(request):
-    function.test()
+    # function.test()
     return render(request,'y_analizeapp/page2.html')
