@@ -60,16 +60,42 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'y_analize.wsgi.application'
 
+try:
+    DATABASES = {
+        'default': {
+            # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            # 'NAME': 'postgres',
+            # 'USER':'postgres',
+            # 'PASSWORD':'p@ssword',
+            # 'HOST':'localhost',
+            # 'PORT':'',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+except:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'postgres',
+            'USER':'postgres',
+            'PASSWORD':'p@ssword',
+            'HOST':'localhost',
+            'PORT':'',
+            # 'ENGINE': 'django.db.backends.sqlite3',
+            # 'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
