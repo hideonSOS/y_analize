@@ -10,16 +10,16 @@
     var data = {
         labels: {{ page1_dict.Axis }},
         datasets: [{
-            label: "{{ page1_dict.Title }}",
-            data: {{ page1_dict.View }},
+            label: "{{ page1_dict.Title1 }}",
+            data: {{ page1_dict.View1 }},
             borderColor: 'rgba(255, 100, 100, 1)',
             borderWidth:1,
             fill:false,
             pointRadius:0
         },
         {
-            label: 'テストデータ２',
-            data: [580, 100, 600, 320, 230],
+            label: "{{ page1_dict.Title2 }}",
+            data: {{ page1_dict.View2 }},
             borderColor: 'rgba(0, 0, 200, 1)',
             borderWidth:1,
             fill:false,
@@ -35,5 +35,17 @@
         options: options
     });
     </script>
+<form action="/page1/" method="POST">{% csrf_token %}
+    <input type="text" name="inputbox1" value="20220222" list="CL">
+    <input type="text" name="inputbox2" value="20220222" list="CL">
+    <datalist id="CL">
+        {% for i in page1_dict.CL %}
+            <option value={{ i }}></option>
+        {% endfor %}
+    </datalist>
+    <input type="submit" value="表示" class="btn btn-warning">
+</form>
+
+
 
 {% endblock %}

@@ -1,15 +1,28 @@
 import pandas as pd
 import numpy as np
-targetpath = 'model/20210804.csv'
+targetpath = 'model/viewcount.csv'
 
-df = pd.read_csv(targetpath, index_col=1,encoding='utf-8')
+df = pd.read_csv(targetpath, index_col=0,encoding='utf-8')
+CL = [i for i in df.columns]
 
 def send_page1(inputbox1,inputbox2):
-    page1_dict={
-        'Title':inputbox1,
-        'View':[i for i in df.iloc[:, 2]],
-        'Axis':[i for i in df.iloc[:, 0]],
-    }
+    try:
+        page1_dict={
+            'Title1':inputbox1,
+            'Title2':inputbox2,
+            'View1':[i for i in df[str(inputbox1)]],
+            'View2':[i for i in df[str(inputbox2)]],
+            'Axis':[i for i in df.index],
+            'CL':CL,
+        }
+    except:
+        page1_dict={
+            'Title1':'Nonevalue',
+            'Title2':'Nonevalue',
+            'View1':[0 for i in range(0,358)],
+            'View2':[0 for i in range(0,358)],
+            'Axis':[i for i in range(0,358)],
+        }
     return page1_dict
 
 

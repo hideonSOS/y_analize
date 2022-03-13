@@ -8,6 +8,7 @@ def test(request):
 def page1(request):
     inputbox1 = request.POST.get('inputbox1')
     inputbox2 = request.POST.get('inputbox2')
+    print(inputbox1,inputbox2)
     page1_dict = function.send_page1(inputbox1,inputbox2)
     
     return render(request,'y_analizeapp/page1.html', {'page1_dict':page1_dict})
