@@ -3,7 +3,7 @@ import numpy as np
 targetpath = 'model/viewcount.csv'
 
 df = pd.read_csv(targetpath, index_col=0,encoding='utf-8')
-CL = [i for i in df.columns]
+# CL = [i for i in df.columns]
 
 def send_page1(inputbox1,inputbox2):
     try:
@@ -13,7 +13,7 @@ def send_page1(inputbox1,inputbox2):
             'View1':[i for i in df[str(inputbox1)]],
             'View2':[i for i in df[str(inputbox2)]],
             'Axis':[i for i in df.index],
-            'CL':CL,
+            'CL':[i[0:8] for i in df.columns],
         }
     except:
         page1_dict={

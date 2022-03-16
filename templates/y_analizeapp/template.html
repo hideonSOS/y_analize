@@ -15,8 +15,21 @@ style="font-size:20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     height: 40px; 
     background-color: rgb(255, 100, 100);
-    color: aliceblue;">
+    color: aliceblue; white-space: nowrap;">
     &emsp;YouTube 同時接続数等 分析サイト（開発中）
+    <!-- <div class="collapse navbar-collapse justify-content-end"> -->
+    <div class="collapse navbar-collapse justify-content-end">
+
+        {% if user.is_authenticated %}
+        <span style="font-size:15px; text-align: right; width: 300px;">
+            <!-- ログアウトのURLに移動するように処理 -->
+            <a href="{% url 'logout' %}" style="color:black; text-decoration: underline;">
+            こんにちは、{{ user.username}}さん
+            </a>
+        </span>
+        {% endif %}
+    </div>
+
 </nav>
 
 <p></p>
