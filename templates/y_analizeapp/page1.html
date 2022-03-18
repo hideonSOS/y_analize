@@ -1,9 +1,35 @@
 {% extends 'y_analizeapp/template.html' %}
+
+{% load static %}
+{% block header %}
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link rel="stylesheet" href="{% static 'y_analizeapp/style1.css' %}">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="{% static 'y_analizeapp/script1.js' %}"></script>
+{% endblock %}
 {% block content %}
+
 <p></p>
-<style>
-    #ex_chart {max-width:1860px;max-height:480px;}
-</style>
+<div id="wrapper">
+    <span></span>
+    <span></span>
+    <span></span>
+<nav id="global-navi">
+<ul class="menu">     
+<li><a href="/page1">page1</a></li>
+<li><a href="/page2">page2</a></li>
+<li><a href="/page3">page3</a></li>
+<li><a href="/page4">page4</a></li>
+<li><a href="">お問い合わせ</a></li>
+    </ul>
+</nav>
+</div>
+<!-- <div class="test">teston</div> -->
+
+
     <canvas id="ex_chart"></canvas>
     <script>
     var ctx = document.getElementById('ex_chart');
