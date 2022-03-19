@@ -1,4 +1,8 @@
 {% extends 'y_analizeapp/template.html' %}
+{% block header %}
+    {{ block.super }}
+{% endblock %}
+
 {% block content %}
 
 <p>page3 area</p>
@@ -9,6 +13,8 @@
     <input type="text" name = 'inputbox2' list="sampleDatalistId">
     <input type="submit" value='遷移'>
 </form>
-<iframe width="460" height="315" src="{{ page3_dict.testurl2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class ='IFRAME'>
+    <iframe width="460" height="315" src="{{ page3_dict.testurl2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 {{ page3_dict.testurl1 }}
 {% endblock %}
