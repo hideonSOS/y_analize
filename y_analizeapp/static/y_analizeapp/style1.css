@@ -1,7 +1,7 @@
 #global-navi {
     background:#333;
     position: fixed;
-    top: 0.01;
+    top: 0;
     right: 0px;
     width: 100%;
 }
@@ -24,7 +24,7 @@ color: #ddd
     padding-top: 50px;
     background:#333;
     font-size: 16px;
-    box-sizing: Border-box;
+    box-sizing: border-box;
     z-index: 2
 }
 #wrapper nav ul li {
