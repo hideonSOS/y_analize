@@ -9,8 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <link rel="stylesheet" href="{% static 'y_analizeapp/style1.css' %}">
-    <script src="{% static 'y_analizeapp/script1.js' %}"></script>
+    
     {% block header %}
     {% endblock %}
     <title>Youtube_視聴数分析サイト</title>
@@ -38,23 +37,6 @@ style="font-size:20px;
 
 </nav>
 
-<div id="wrapper">
-    <p class ="btn-gnavi">
-    <span></span>
-    <span></span>
-    <span></span>
-    </p>
-    <nav id="global-navi">
-        <ul class="menu">     
-            <li><a href="/page1">page1</a></li>
-            <li><a href="/page2">page2</a></li>
-            <li><a href="/page3">page3</a></li>
-            <li><a href="/page4">page4</a></li>
-            <li><a href="">お問い合わせ</a></li>
-        </ul>
-    </nav>
-</div>
-<p></p>
 {% block content %}
 {% endblock %}
 </body>

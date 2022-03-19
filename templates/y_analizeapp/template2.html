@@ -1,0 +1,29 @@
+{% extends 'y_analizeapp/template.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'y_analizeapp/style1.css' %}">
+    <script src="{% static 'y_analizeapp/script1.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="wrapper">
+    <p class ="btn-gnavi">
+    <span></span>
+    <span></span>
+    <span></span>
+    </p>
+    <nav id="global-navi">
+        <ul class="menu">     
+            <li><a href="/page1">page1</a></li>
+            <li><a href="/page2">page2</a></li>
+            <li><a href="/page3">page3</a></li>
+            <li><a href="/page4">page4</a></li>
+            <li><a href="">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</div>
+<p></p>
+
+{% endblock %}

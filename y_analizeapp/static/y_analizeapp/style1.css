@@ -1,14 +1,14 @@
 #global-navi {
     background:#333;
     position: fixed;
-    top: 0.5;
+    top: 0.01;
     right: 0px;
     width: 100%;
 }
 #wrapper nav ul li{
 display:inline-block;
 font-size: 16px;
-padding:  3px 5px 3px 5px;
+padding:  3px 5px 3px 5spx;
 }
 #wrapper nav ul li a{
 color: #ddd
