@@ -34,7 +34,7 @@ color: #ddd
 
 #wrapper nav ul li a {
     text-decoration: none;
-    color: #ddd
+    color: rgb(255,0,0)
 }
 
 #wrapper .btn-gnavi {
