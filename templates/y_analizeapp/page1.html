@@ -2,11 +2,11 @@
 
 {% load static %}
 {% block header %}
-<!-- <link rel="stylesheet" href="{% static 'y_analizeapp/style1.css' %}"> -->
-{{ block.super }}
+    {{ block.super }}
 {% endblock %}
+
 {% block content %}
-{{ block.super }}
+    {{ block.super }}
 <div class='test'>test</div>
     <canvas id="ex_chart"></canvas>
     <script>
@@ -40,8 +40,8 @@
     });
     </script>
 <form action="/page1/" method="POST">{% csrf_token %}
-    <input type="text" name="inputbox1" value="20220222" list="CL">
-    <input type="text" name="inputbox2" value="20220222" list="CL">
+    <input type="text" name="inputbox1" value="" list="CL">
+    <input type="text" name="inputbox2" value="" list="CL">
     <datalist id="CL">
         {% for i in page1_dict.CL %}
             <option value={{ i }}></option>
@@ -49,7 +49,7 @@
     </datalist>
     <input type="submit" value="表示" class="btn btn-warning">
 </form>
-{% for i in page1_dict.CL %}_
+{% for i in page1_dict.CL %}
 <p>{{ i }}</p>
 {% endfor %}
 
