@@ -30,6 +30,7 @@ def send_page1(inputbox1,inputbox2):
 testurl1 = "https://www.youtube.com/embed/v6Qo3DpnmhQ"
 #【ボートレース住之江】 １Ｒ－６Ｒ 実況放送～７Ｒ－１２Ｒ マスヒノ大作戦（2022/1/31）
 testurl2 = "https://www.youtube.com/embed/_Hod11jijWA"
+
 def send_page3():
     page3_dict={
         'Title':'SAMPLE TITLE',
