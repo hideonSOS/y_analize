@@ -7,8 +7,9 @@
 
 {% block content %}
     {{ block.super }}
-    <div class='test'>test</div>
+    <div class='canvas'>
     <canvas id="ex_chart"></canvas>
+    </div>
     <script>
     var ctx = document.getElementById('ex_chart');
     var data = {
@@ -39,17 +40,18 @@
         options: options
     });
     </script>
-<form action="/page1/" method="POST">{% csrf_token %}
-    <input type="text" name="inputbox1" value="" list="CL">
-    <input type="text" name="inputbox2" value="" list="CL">
-    <datalist id="CL">
-        {% for i in page1_dict.CL %}
-            <!-- <option value={{ i }}></option> -->
-            <option value="{{ i }}">
-        {% endfor %}
-    </datalist>
-    <input type="submit" value="表示" class="btn btn-warning">
-</form>
+
+    <form action="/page1/" method="POST">{% csrf_token %}
+        <input type="text" name="inputbox1" value="{{ page1_dict.Title1 }}" list="CL">
+        <input type="text" name="inputbox2" value="{{ page1_dict.Title2 }}" list="CL">
+        <datalist id="CL">
+            {% for i in page1_dict.CL %}
+                <!-- <option value={{ i }}></option> -->
+                <option value="{{ i }}">
+            {% endfor %}
+        </datalist>
+        <input type="submit" value="表示" class="btn btn-warning">
+    </form>
 
 
 

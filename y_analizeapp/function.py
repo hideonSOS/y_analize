@@ -18,8 +18,8 @@ def send_page1(inputbox1,inputbox2):
         }
     except:
         page1_dict={
-            'Title1':'Nonevalue',
-            'Title2':'Nonevalue',
+            'Title1':'',
+            'Title2':'',
             'View1':[0 for i in range(0,358)],
             'View2':[0 for i in range(0,358)],
             'Axis':[i for i in range(0,358)],
