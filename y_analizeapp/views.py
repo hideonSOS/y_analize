@@ -33,7 +33,7 @@ def page3(request):
         page3_dict = page3_dict=function.send_page3()
 
     page3_dict = page3_dict=function.send_page3()
-    print(page3_dict)
+    
     
     return render(request,'y_analizeapp/page3.html',{'page3_dict':page3_dict})
 

@@ -16,8 +16,8 @@
     <input type="text" name = 'inputbox2' list="sampleDatalistId">
     <input type="submit" value='遷移'>
 </form>
-<div class ='IFRAME'>
-    <iframe width='100%' height="315" src="{{ page3_dict.testurl2 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-{{ page3_dict.testurl1 }}
+
+    <iframe width='100%' height="315" src="{{ page3_dict.testurl2 }}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>{{ page3_dict.testurl2 }}?autoplay=1</p>
 {% endblock %}
