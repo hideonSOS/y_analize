@@ -4,7 +4,8 @@ targetpath = 'model/viewcount.csv'
 
 df = pd.read_csv(targetpath, index_col=0,encoding='utf-8')
 # CL = [i for i in df.columns]
-
+def send_page1_func():
+    return [i[0:8] for i in df.columns]
 def send_page1(inputbox1,inputbox2):
     try:
         page1_dict={
@@ -22,6 +23,7 @@ def send_page1(inputbox1,inputbox2):
             'View1':[0 for i in range(0,358)],
             'View2':[0 for i in range(0,358)],
             'Axis':[i for i in range(0,358)],
+            'CL':[i[0:8] for i in df.columns],
         }
     return page1_dict
 
@@ -34,6 +36,7 @@ testurl2 = "https://www.youtube.com/embed/_Hod11jijWA"
 def send_page3():
     page3_dict={
         'Title':'SAMPLE TITLE',
+        
         'testurl1':testurl1,
         'testurl2':testurl2
     }

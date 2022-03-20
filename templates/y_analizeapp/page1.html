@@ -7,7 +7,7 @@
 
 {% block content %}
     {{ block.super }}
-<div class='test'>test</div>
+    <div class='test'>test</div>
     <canvas id="ex_chart"></canvas>
     <script>
     var ctx = document.getElementById('ex_chart');
@@ -44,14 +44,13 @@
     <input type="text" name="inputbox2" value="" list="CL">
     <datalist id="CL">
         {% for i in page1_dict.CL %}
-            <option value={{ i }}></option>
+            <!-- <option value={{ i }}></option> -->
+            <option value="{{ i }}">
         {% endfor %}
     </datalist>
     <input type="submit" value="表示" class="btn btn-warning">
 </form>
-{% for i in page1_dict.CL %}
-<p>{{ i }}</p>
-{% endfor %}
+
 
 
 {% endblock %}
