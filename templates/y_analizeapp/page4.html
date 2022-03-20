@@ -1,5 +1,9 @@
-{% extends 'y_analizeapp/template.html' %}
+{% extends 'y_analizeapp/template2.html' %}
+{% block header %}
+    {{ block.super }}
+{% endblock %}
 {% block content %}
+    {{ block.super }}
 <p></p>
 
 <form action="/page3/" method="POST">{% csrf_token %}
