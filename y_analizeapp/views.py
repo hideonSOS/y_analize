@@ -70,3 +70,8 @@ def signup(request):
         form = SignUpForm()
         
     return render(request, 'boatnavi5app/signup.html', {'form':form})
+
+
+@login_required
+def home(request):
+    return render(request, 'y_analizeapp/home.html')

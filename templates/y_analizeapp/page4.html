@@ -8,7 +8,40 @@
 
 <form action="/page3/" method="POST">{% csrf_token %}
     <div>
-        <input type='text' name="inputbox1" class="input-btn-padding-y-sm">
+        <label>開催日（８桁）  ：<input type='text' name="inputbox1" class="input-btn-padding-y-sm"></label>
+    </div>
+    <p></p>
+    <div>
+        <label>input type='tel' ><input type="tel" pattern="[0-9]"></label>
+    </div>
+    <p></p>
+    <div>
+        <label>input type='date' ><input type="date"></label>
+    </div>
+    <p></p>
+    <div>
+        <p>input type='radio' ></p>
+        <input type="radio" name="radio_1">
+        <input type="radio" name="radio_2">
+    </div>
+    <p></p>
+    <div>
+        <label>input type='file' ><input type="file"></label>
+    </div>
+    <p></p>
+    <div>
+        <label>input type='range' ><input type="range"></label>
+    </div>
+    <p></p>
+    <div>
+        <label>input type='color' ><input type="color"></label>
+    </div>
+    <p></p>
+    <div>
+        <label>input multiple='multiple' type='file' ><input multiple="multiple" type="file" style="font-size:14px;" class="btn btn-primary"></label>
+    </div>
+    <div>
+        <input type="reset" value="削除" class="btn btn-danger" style="height:25px;font-size:10px;" style="font-size:xx-small;">
     </div>
     <p></p>
     <div>
