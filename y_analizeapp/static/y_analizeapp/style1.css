@@ -118,6 +118,6 @@ color: #ddd
 .canvas{
     position:relative;
     width:calc(100%-40px);
-    height:500px;
+    height:400px;
     overflow:hidden;
 }
