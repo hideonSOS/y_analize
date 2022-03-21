@@ -2,9 +2,30 @@
 {% load static %}
 {% block header %}
     {{ block.super }}
+    <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" rel="stylesheet">
+    <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-1/css/4-1-1.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'y_analizeapp/style2.css' %}">
 {% endblock %}
 {% block content %}
 {{ block.super }}
-<p>test2 Area</p>
-<img src="{% static 'y_analizeapp/test.jpg' %}"></img>
+    <div id="splash">
+        <div id="splash_text"></div>
+        </div>
+        <div class='csstest'>test2 Area</div>
+        <p></p>
+        <p class="resizeimage">
+            <img src="{% static 'y_analizeapp/test.jpg' %}"></img>
+        </p>
+    </div>
+{% endblock %}
+{% block script %}
+
+<!--==============JQuery読み込み===============-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!--自作のJS-->
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-1/js/4-1-1.js"></script>
 {% endblock %}
