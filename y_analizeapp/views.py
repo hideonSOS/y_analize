@@ -75,3 +75,6 @@ def signup(request):
 @login_required
 def home(request):
     return render(request, 'y_analizeapp/home.html')
+
+
+#test
