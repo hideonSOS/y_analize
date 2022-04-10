@@ -25,41 +25,20 @@
         {
             label: "{{ page1_dict.Title2 }}",
             data: {{ page1_dict.View2 }},
-            borderColor: 'cyan',
+            borderColor: 'rgba(0, 0, 200, 1)',
             borderWidth:1,
             fill:false,
             pointRadius:0
         }]
     };
-    
-    var xAxes=[{
-        gridLines:{
-            color:'rgb(50,50,50)'
-        },
-    ticks:{fontColor:'rgb(20,20,20)'}}];
-    var yAxes=[{
-        gridLines:{
-            color:'rgb(50,50,50)'
-    }}];
-    var scales={xAxes:xAxes,
-                yAxes:yAxes
-    };
-
     var options = {
         maintainAspectRatio:false,
-        scales:scales,
-        // title:{display:true,
-        //     fontColor:'white',
-        //     text:'test'}
     };
     var ex_chart = new Chart(ctx, {
         type: 'line',
         data: data,
         options: options
     });
-
-
-
     </script>
 
     <form action="/page1/" method="POST">{% csrf_token %}
