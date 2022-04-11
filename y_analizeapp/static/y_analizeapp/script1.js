@@ -16,6 +16,3 @@ $(function(){
         }, 200);
     });
 });
-body{
-    background-color:black;
-}
