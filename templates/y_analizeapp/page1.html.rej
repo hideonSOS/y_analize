@@ -1,0 +1,9 @@
+diff a/templates/y_analizeapp/page1.html b/templates/y_analizeapp/page1.html	(rejected hunks)
+@@ -25,7 +25,6 @@
+         {
+             label: "{{ page1_dict.Title2 }}",
+             data: {{ page1_dict.View2 }},
+-            borderColor: 'rgba(0, 0, 200, 1)',
+             borderColor: 'cyan',
+             borderWidth:1,
+             fill:false,
