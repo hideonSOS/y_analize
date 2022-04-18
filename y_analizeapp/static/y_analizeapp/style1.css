@@ -1,12 +1,5 @@
-.nav{
-    // background-color: linear-gradient(#05FBFF, #1E00FF);
-    background-color:white;
-    color:blue;
-    border-radius: 10px;
-    height: 20px;
-    padding: 10px;
-    font-family: Helvetica;
-    
+.body{
+    background-color: rgb(30,30,30);
 }
 
 #calendar {
@@ -49,7 +42,7 @@
 }
 #wrapper nav ul li {
     display:block;
-    padding: 20px 28px
+    padding: 5px 28px
 }
 
 #wrapper nav ul li a {
