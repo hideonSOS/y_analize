@@ -8,31 +8,29 @@
     font-family: Helvetica;
     
 }
-body{
-    background-color:rgb(20,20,20);
-    color:white;
-    font-family: sans-serif;
+
+#calendar {
+    width: 100%;
+    height:1000px;
 }
 
-nav {
-    background-color: #222222;
-    color: white;
+#global-navi {
+    background:rgb(255,100,100);
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 100%;
 }
-nav ul {
-    display: flex;
-    flex-flow: row;
-    list-style-type: none;
+
+#wrapper nav ul li{
+    display:inline-block;
+    font-size: 16px;
+    padding:  10px 10px 10px 10px;
 }
-nav li.login {
-    margin-left: auto; 
-}
-nav a {
-    display: block;
-    border-radius: 4px;
-    padding: 0px 24px;
-    color: white;
-    
-    text-decoration: none;
+
+#wrapper nav ul li a{
+    color: #ddd;
+    font-family: sans-serif;
 }
 
 
